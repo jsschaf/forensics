@@ -3,9 +3,16 @@
 2. What operating system does the suspect use?
 
 3. What is the username of the account typically used by the suspect?
+
 4. Any indication that the suspect shared the company secrets with other individuals?
-5. Reconstruct the timeline of actions by the suspect that may be relevatn
+
+5. Reconstruct the timeline of actions by the suspect that may be relevant
+
 6. Anything else on the computer that would imply the suspect had malicious intents in using this computer?
+
 7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
+
 8. Did the suspect try to delete any files before their arrest? Please attach the name(s) of the file(s) and any indications of their contents that you can find.
+
 9. List all other secrets, and other findings.
+    At least 212 Possible Zip Bombs (evidence 9.0)

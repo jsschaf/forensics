@@ -1,0 +1,11 @@
+1. What specific behaviors of this machine make booting normally a bad idea?
+    A anti-theft system asks for a system password before botting the operating system. However, if you input the incorrect password (evidence 1.0) the hard drive will purge itself (evidence 1.1, 1.2). Therefore, as a forensic investigator, we only have one chance to get into the hard drive or else it will delete all of the information on the hard drive.
+2. What operating system does the suspect use?
+
+3. What is the username of the account typically used by the suspect?
+4. Any indication that the suspect shared the company secrets with other individuals?
+5. Reconstruct the timeline of actions by the suspect that may be relevatn
+6. Anything else on the computer that would imply the suspect had malicious intents in using this computer?
+7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
+8. Did the suspect try to delete any files before their arrest? Please attach the name(s) of the file(s) and any indications of their contents that you can find.
+9. List all other secrets, and other findings.

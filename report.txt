@@ -3,7 +3,7 @@
 2. What operating system does the suspect use?
 
 3. What is the username of the account typically used by the suspect?
-
+    Ubuntu->Advanced Options with Ubuntu -> (recovery mode) -> resume -> Ubuntu login page with user "Leslie Nielson"
 4. Any indication that the suspect shared the company secrets with other individuals?
 
 5. Reconstruct the timeline of actions by the suspect that may be relevant

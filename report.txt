@@ -1,17 +1,24 @@
 1. What specific behaviors of this machine make booting normally a bad idea?
     A anti-theft system asks for a system password before botting the operating system. However, if you input the incorrect password (evidence 1.0) the hard drive will purge itself (evidence 1.1, 1.2). Therefore, as a forensic investigator, we only have one chance to get into the hard drive or else it will delete all of the information on the hard drive.
+
 2. What operating system does the suspect use?
 
+
 3. What is the username of the account typically used by the suspect?
-    Ubuntu->Advanced Options with Ubuntu -> (recovery mode) -> resume -> Ubuntu login page with user "Leslie Nielson"   
+    Ubuntu->Advanced Options with Ubuntu -> (recovery mode) -> resume -> Ubuntu login page with user "Leslie Nielson"
+
 4. Any indication that the suspect shared the company secrets with other individuals?
+    Yes there is indication that the suspect shared the company secrets. There is a hidden message in 1.jpg. Using a steganographic decoder, we were able to find an internal SDSC email telling Alex to dump Bungle stock (evidence 4.0). This message was sent to "5H3PH3RD" which we found in "#private.log" under /home/leslie/.irssi/logs/ (evidence 4.1) 
 
 5. Reconstruct the timeline of actions by the suspect that may be relevant
+
 
 6. Anything else on the computer that would imply the suspect had malicious intents in using this computer?
 
 7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
     Under leslie/Documents there is a zipped file called "secrets.zip" that is password protected. Using fzipcrack we were able to brute force a password "6f7y" (evidence 7.0)
+    Once decrypted, we found there to be 1.jpg, 2.jpg, contract.mp3, and secret_exe (evidence 7.1). Unzipping the folder it will show us that 2.jpg is nearly 3x greater in size than 1.jpg. We then renamed 2.jpg into 2.zip and opened it showing two more files. "good_advice.png" and "plan.png" (evidence 7.2) 
+
 8. Did the suspect try to delete any files before their arrest? Please attach the name(s) of the file(s) and any indications of their contents that you can find.
 
 9. List all other secrets, and other findings.

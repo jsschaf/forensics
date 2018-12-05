@@ -8,7 +8,8 @@
     Ubuntu->Advanced Options with Ubuntu -> (recovery mode) -> resume -> Ubuntu login page with user "Leslie Nielson"
 
 4. Any indication that the suspect shared the company secrets with other individuals?
-    Yes there is indication that the suspect shared the company secrets. There is a hidden message in 1.jpg. Using a steganographic decoder, we were able to find an internal SDSC email telling Alex to dump Bungle stock (evidence 4.0). This message was sent to "5H3PH3RD" which we found in "#private.log" under /home/leslie/.irssi/logs/ (evidence 4.1) 
+
+    Yes there is indication that the suspect shared the company secrets. There is a hidden message in 1.jpg. Using a steganographic decoder, we were able to find an internal SDSC email telling Alex to dump Bungle stock (evidence 4.0). This message was sent to "5H3PH3RD" which we found in "#private.log" under /home/leslie/.irssi/logs/ (evidence 4.1). We have also found a hidden chat room on https://weratepups.xyz/ where he says he has a way to get back at SDSC, indicating that he has/will intend to either release or share the company secret (eivdence 4.2).
 
 5. Reconstruct the timeline of actions by the suspect that may be relevant
 
@@ -16,10 +17,14 @@
 6. Anything else on the computer that would imply the suspect had malicious intents in using this computer?
 
 7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
+
     Under leslie/Documents there is a zipped file called "secrets.zip" that is password protected. Using fzipcrack we were able to brute force a password "6f7y" (evidence 7.0)
-    Once decrypted, we found there to be 1.jpg, 2.jpg, contract.mp3, and secret_exe (evidence 7.1). Unzipping the folder it will show us that 2.jpg is nearly 3x greater in size than 1.jpg. We then renamed 2.jpg into 2.zip and opened it showing two more files. "good_advice.png" and "plan.png" (evidence 7.2) 
+    Once decrypted, we found there to be 1.jpg, 2.jpg, contract.mp3, and secret_exe (evidence 7.1). Unzipping the folder it will show us that 2.jpg is nearly 3x greater in size than 1.jpg. We then renamed 2.jpg into 2.zip and opened it showing two more files. "good_advice.png" and "plan.png" (evidence 7.2). We explored contract.mp3 using a sonic visualizer and by applying a spectogram to the waveform, we discover a message "PP4m#36ajKlmu" (evidence 7.3). When we open secret_exe using a text editor, we discover plain text "the password is "ke9dtcesm6f"" (evidence 7.4)
 
 8. Did the suspect try to delete any files before their arrest? Please attach the name(s) of the file(s) and any indications of their contents that you can find.
 
 9. List all other secrets, and other findings.
     At least 212 Possible Zip Bombs (evidence 9.0)
+
+    Agent User to get into the concieled chat is 86753 (evidence 9.1)
+    

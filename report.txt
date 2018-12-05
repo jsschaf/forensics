@@ -1,18 +1,34 @@
 1. What specific behaviors of this machine make booting normally a bad idea?
     A anti-theft system asks for a system password before botting the operating system. However, if you input the incorrect password (evidence 1.0) the hard drive will purge itself (evidence 1.1, 1.2). Therefore, as a forensic investigator, we only have one chance to get into the hard drive or else it will delete all of the information on the hard drive.
+
 2. What operating system does the suspect use?
+#24-Ubuntu x86_64
 
 3. What is the username of the account typically used by the suspect?
     Ubuntu->Advanced Options with Ubuntu -> (recovery mode) -> resume -> Ubuntu login page with user "Leslie Nielson"
+
 4. Any indication that the suspect shared the company secrets with other individuals?
+- 1.jpg steganography reveals to drop stock
 
 5. Reconstruct the timeline of actions by the suspect that may be relevant
 
+
 6. Anything else on the computer that would imply the suspect had malicious intents in using this computer?
+- delete bashrc
+- using tor
+- chat log discussing vulenrable hosts to default passwords, smbv1…
+
 
 7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
+	- secrets.zip
+	- info.pdf —> get hash using john, then use john again to get password from hash
+
 
 8. Did the suspect try to delete any files before their arrest? Please attach the name(s) of the file(s) and any indications of their contents that you can find.
+	insurance.txt
+	planning.png
+	
+
 
 9. List all other secrets, and other findings.
     At least 212 Possible Zip Bombs (evidence 9.0)

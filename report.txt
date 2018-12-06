@@ -16,20 +16,22 @@
 
 5. Reconstruct the timeline of actions by the suspect that may be relevant
 
-- March 11, 2am: chat between Art3m15 and 5H3PH3RD discussing list of vulnerable hosts (evidence 5.2)
-- March 11 19:12:05 Deleted Tor Browser (evidence 5.1)
-- deleted bash history	2018-03-15 20:06:21 (EDT) (evidence 5.5)
-- deleted insurance and planning on 2018-03-15 20:00 (evidence 5.0)
-- March 15 did a backup with suspicious stuff, like testmalware  (evidence 5.3)
-- March 15 delete a bunch of stuff (evident in authlog evidence5.4.txt)
+- March 11, 2am: chat between Art3m15 (Leslie) and 5H3PH3RD discussing list of vulnerable hosts (evidence 5.2)
+- March 11 7pm Deleted Tor Browser (evidence 5.1)
+- March 15 1pm did a backup with suspicious stuff, like testmalware  (evidence 5.3)
+- March 15 8pm deleted bash history (evidence 5.5)
+- March 15 8pm deleted insurance and planning on (evidence 5.0)
+- March 15 8pm delete a bunch of stuff (evident in authlog evidence5.4.txt)
+- November 8th Chat begins on weratepups.xyz (evidence 5.7)
+- November 15th Artemis sends final message on weratepups.xyz (Evidence 5.6)
 
+There is an inconsistency in the timeline. It appears Leslie is still active and on the run after March. 
 
 
 6. Anything else on the computer that would imply the suspect had malicious intents in using this computer?
-- delete bashrc
-- using tor
-- chat log discussing vulenrable hosts to default passwords, smbv1…
-
+- Deleting Bash History
+- Using Tor in general
+- Visiting suspicious webpages in firefox such as piratebay and freearabsexx.com (evidence 6.0)
 
 7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
 

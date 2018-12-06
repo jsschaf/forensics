@@ -28,7 +28,7 @@ There is an inconsistency in the timeline. It appears Leslie is still active and
 6. Anything else on the computer that would imply the suspect had malicious intents in using this computer?
 - Deleting Bash History
 - Using Tor in general
-- Visiting suspicious webpages in firefox such as piratebay and freearabsexx.com (evidence 6.0)
+- Visiting suspicious webpages in firefox such as piratebay and freearabsexx.com (evidence 6.0) Also visited metasploit.com which is a website for detecting security vulnerabilities. Leslie could have used it for illegal penetration testing. There is also a link to hamhash.com/not, which shows Leslie used a temporary URL, maybe for malicious reasons. 
 
 7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
     There is a zipped file called "secrets.zip", which using password "6f7y

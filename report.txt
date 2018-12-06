@@ -1,63 +1,74 @@
 1. What specific behaviors of this machine make booting normally a bad idea?
-    There is an anti-theft system that asks for a password before booting the operating system. If an incorrect password (evidence 1.0) is detected, the hard drive will purge itself (evidence 1.1) making it impossible to get into (evidence 1.2). As forensic investigators, we must find a backdoor to get around the anti-theft system.
-
+There is an anti-theft system that asks for a password before booting the operating system. If an incorrect password (evidence 1.0) is detected, the hard drive will purge itself (evidence 1.1) making it impossible to get into (evidence 1.2). As forensic investigators, we must find a backdoor to get around the anti-theft system.
 2. What operating system does the suspect use?
     The suspect is using "4.13.0-21-genertic #24-Ubuntu" (evidence 2.0).
-
 3. What is the username of the account typically used by the suspect?
-    The username of the account typically used by the suspect is "Leslie Nielson" (evidence 3.0). The suspect also uses the online alias "Artemis" (evidence 3.1).
-
+    The username of the account typically used by the suspect is "Leslie Nielson" (evidence 3.0). The suspect also uses the online alias "Artemis" (evidence 3.1) or "Artm3m15" (evidence 8.2).
 4. Any indication that the suspect shared the company secrets with other individuals?
     There is indication that the suspect has shared the company secrets.
         - There is a hidden message in 1.jpg which contains an internal SDSC email telling Alex to dump Bungle stock (evidence 4.0).
         - A top secret SDSC memo was leaked (evidence 4.1), we believe by the suspect because a file on their device named "secret_exe" had the password to unlock the SDSC memo (evidence 4.2). 
         - A top secret SDSC ledger was also leaked (evidence 4.3), which we also believe the suspect provided because a file on their device named "contract.mp3" had the password to unlock the ledger (evidence 4.4).
-
 5. Reconstruct the timeline of actions by the suspect that may be relevant
-
-
+    <2018-02-27 13:12:14 EST> election.jpg in "finished" was created with the "Dirt on Bungle" email (evidence 4.0)
+    <2018-02-27 13:12:14 EST> yodawg.jpg in "finished" was created as a zip with the two files (evidence 7.2)
+    <2018-02-27 13:12:16 EST> contract.mp3 in "finished" was created with SDSC ledger password (evidence 4.4)
+    <2018-03-01 10:13:34 EST> 'Deleted txt file.docx" in "finished" was created containing the discovered members of The Collective (evidence 8.1)
+    <2018-03-01 10:37:00 EST> 'IRC Chat.docx' in "finished" was created containing the chat log between Art3ml5 and 5H3PH3RD 
+    <2018-03-01 12:31:44 EST> secret_exe in "finished" was created containing the password to unlock the SDSC memo (evidence 4.2)
+    <2018-03-04 20:30:46 EST> Conversation.docx in "finished" was created containing the conversation in the concealed chat on weratepups.xyz 
+    <2018-03-11 02:54:24 EDT> Chat between Art3m15 and 5H3PH3RD is initiated (#private.log)
+    <2018-03-11 18:22:00 EDT> Google search for "The Collective" (evidence 5.0)
+    <2018-03-11 19:08:39 EDT> Downloaded Tor 
+    <2018-03-11 19:17:43 EDT> Downloads sonicvisualizer to hide ledger password in contract.mp3
+    <2018-03-11 19:45:28 EDT> Downloaded metasploit (evidence 5.1)
+    <2018-03-15 13:46:58 EDT> Acquires RSA Private key from pastebin
+    <2018-03-15 13:54:24 EDT> Acquires Public key from pastebin
+    <2018-03-15 12:43:45 EDT> Downloaded "finished" from Google Drive
+    <2018-03-15 12:45:00 EDT> planning.png in 'Documents' is created (evidence 5.2)
+    <2018-03-15 12:52:35 EDT> insurance.txt in 'Documents' is created (evidence 5.2)
+    <2018-03-15 20:04:00 EDT> bash_history is deleted
+    <2018-03-15 20:05:59 EDT> planning.png in 'Documents' is deleted (evidence 5.2)
+    <2018-03-15 20:06:02 EDT> insurance.txt in 'Documents' is deleted (evidence 5.2)
+    <2018-03-15 20:09:38 EDT> secrets.zip in 'Documents' is created (evidence 5.2)
+    <2018-03-15 20:20:00 EDT> .chat.log.swx in 'Documents' is deleted (evidence 5.2)
+    <2018-03-15 22:55:13 EDT> #private.log in '/.irssi/logs' is created
+    <2018-03-25 16:47:39 EDT> finished in 'Documents' is deleted (evidence 5.2)
+    <2018-03-25 16:48:18 EDT> .chat.log.swx in 'Documents' is created (evidence 5.2)
+    <November 12> Artemis enters The Collective chat (evidence 5.3)
+    <November 15> Artemis sends final message in The Collective chat (evidence 5.4)
+    
+    Looking at the timeline, we can conclude that the suspect had planned on leaking company secrets weeks before they contacted 5H3PH3RD and released the documents. Additionally, we presume that the suspect is still active and had access to their machine because they deleted files 10 days after their supposed disappearance.
+    There is an inconsistency between the concealed chat and the chat logs. The concealed chat shows that Artemis did not enter The Collective chat until early November, however the chat documents on their hard drive show that the chats happened before March 1st.
 6. Anything else on the computer that would imply the suspect had malicious intents in using this computer?
-
-
+    - Deleted Bash History (.bash_history)
+    - Visited metasploit.com, a penetration testing software. The suspect could have been using this for illegal penetration testing (evidence 5.1)
+    - 217 possible zip bombs (evidence 6.2)
 7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
-    There is a zipped file called "secrets.zip", which using password "6f7y
-     (evidence 7.0), contained
-        - 1.jpg, which contained an internal SDSC email (evidence 4.0)
-        - 2.jpg, which when renamed to 2.zip contained two more files "good_advice.png" and "plan.png" (evidence 7.2)
-        - contract.mp3, which when analyzed through a sonic visualizer revealed a message "PP4m#36ajK1mu" (evidence 4.4)
-        - secret_exe, which we discovered plain text "the password is "ke9dtcesm6f"" (evidence 4.2)
-
+    Encrypted zipped file called "secrets.zip", we brute forced the password "6f7y (evidence 7.0), contained:
+        - 1.jpg, using a steganographic decoder contained an internal SDSC email (evidence 4.0)
+        - 2.jpg, renamed to 2.zip contained two files "good_advice.png" and "plan.png" (evidence 7.2)
+        - contract.mp3, analyzed through a sonic visualizer revealed a message "PP4m#36ajK1mu" evidence 4.4)
+        - secret_exe, opened in text editor contains "the password is "ke9dtcesm6f" (evidence 4.2)
 8. Did the suspect try to delete any files before their arrest? Please attach the name(s) of the file(s) and any indications of their contents that you can find.
     The suspect tried to delete the folder "finished" and files ".chat.log.swx", "insurance.txt", and "planning.png"
-        - We found the folder "finished" (evidence 8.0) which contained many images as well as multiple files
+        - Folder "finished" (evidence 8.0) was recovered with many images as well as multiple files
         - "finished" contained a document that would eventually be "insurance.txt" (evidence 8.1) 
-        - We recovered ".chat.log.swx" (evidence 8.2) using Autopsy
-        - We found "planning.png" in 2.jpg from part 7 (evidence 7.2, 8.3).
-
+        - ".chat.log.swx" (evidence 8.2) was recovered
+        - "planning.png" is in 2.jpg from part 7 (evidence 7.2, 8.3).
     The suspected deleted the contents from "bash_history" (evidence 5.5)
-
 9. List all other secrets, and other findings.
-
-    217 Possible Zip Bombs: Using Autopsy, we were alerted to 217 possible zip bombs (evidence 9.0)
-
-    Leslie's Ubuntu Password: Used John the Ripper to find the password "copper" (evidence 9.1)
-
-    info.pdf password: Inside the recovered chat log (evidence 8.2), we got a link to a password protected pdf. We cracked the pdf, discovering password "beacon" (evidence 9.2)
-
-    Agent user: We used a python script (agent.py) to brute force https://weratepups.xyz in order to find the agent user, 86753, to real a concealed chat (evidence 9.3)
-
-    RSA Public key: found in id_rsa (evidence 9.4) in order to confirm our identity in the conconcealed chat
-
+    Hard Drive Deleting Password: Using Autopsy, we found a script called "start.sh" in root of the "second" partition. It exposes the password as "8yf7bp" (evidence 9.0).
+    Leslie's Ubuntu Password: Used John the Ripper to find the password "copper" (evidence 9.2)
+    info.pdf password: Inside the recovered chat log (evidence 8.2), we got a link to a password protected pdf. We cracked the pdf, discovering password "beacon" (evidence 9.3)
+    Agent user: We used a python script (agent.py) to brute force https://weratepups.xyz in order to find the agent user, 86753, to real a concealed chat (evidence 9.4)
+    RSA Public key: found in id_rsa (evidence 9.5) in order to confirm our identity in the concealed chat
     insurance.txt: Discovered the members of The Collective when recovered the folder "finished" (evidence 8.1)
-
-    Employee Badge: There is a SDSC Auditor - All Access employee badge (evidence 9.5)
-
-
+    Employee Badge: There is a stolen (assuming the badge is valid, and our suspect's actual name is Leslie) SDSC Auditor - All Access employee badge (evidence 9.6)
+    Base64 of sha256 digest of 'collective': flfwGZomlqvHI8AgdBFj6fePJ5OeB8+kb4S5vzzGkcnimAINBxAlnrcu7HIz5gH59Web0XHqMuAhL8q/4dYJT0UNFvdDReTGHceEuUik6Pyf+WxHoBiC8qfB8ZsNNCz6TokzSeCUIyzT9muwa2nn6uMosV0fOTk+3N6adPaTWed/iNhkG+JASYFAqtBRCJeC+HcEviJW3/hkAem2/cSe7xGUOdYbsNSvX7SAfZZu/X5xilr6kqcQNyxyccYQuP7v30BzS3HW7u408y0k9ZN9xE0vPdhjSpSJqjdp3lJ1WomJwPvvv/eQaK2Rm99I8mX7ackfGUIBhTNKnJ0qtPhQ9eNSxmGrDbksT1DuLmKKIPamqdy0/DsfRlZOWjjAEj3/X5ngIx7kpBCdFkAm6EEWzrlKNl1WJFHjI38d+tWYgQa1/tumc1w8jew0PrQUBi0HHYMvvC7P1+RtaJL3DjXjPRxSAqEXBbdJpSG7uQzwrP6P/jCeheXdyce0DUlOgatQl2EDEoMqIq5TzOfpqf0rFq6/C9uO2JhEk+IAruwaZB0yy6h8+/Y683gPHLTxKvg3V6H5y4jb1fh6hgudnMS4Il3CDB/yu6ZAXWFdf6qJL1Cqd2kQxdw3gNrTRe/iFdkrvSdwN2hOd9LL3yz1udNznD1Ts9ItEYbbI/EZtp6j828=
+    Onion Forum Address: http://afe6b5ieyin7oaf4.onion/phpbb/
 10.
     a. What does this file indicate? (Be specific)
-        This file indicates that the user running SDSC’s website was trying to log in to a machine that it did not have credentials for. They were using port 22 which is the ssh port, and so were tring to get remote access to root on sshd, CRON (a time-based job scheduler), tty1 (text only terminal) and PAM (pluggable authentication module). They successfully gained access to root and changed the password to “chauthtok” after finding user ‘nefarious’
-
+        This file indicates that the user running SDSC’s website was trying to log in to a machine that it did not have credentials for. They were using port 22 which is the ssh port, and so were tring to get remote access to root on ssh’d, CRON (a time-based job scheduler), tty1 (text only terminal) and PAM (pluggable authentication module). They successfully gained access to root and changed the password to “chauthtok” after finding user ‘nefarious’
     b. Can you attribute this behavior to a specific program?
         This auth.log suggests that the suspect was trying to brute force a password. This suggests a program such as THC-HydrU or Hydra5-4, both of which can use a dictionary attack to crack SSH passwords.
-
-

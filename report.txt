@@ -1,13 +1,11 @@
 1. What specific behaviors of this machine make booting normally a bad idea?
-    A anti-theft system asks for a system password before botting the operating system. However, if you input the incorrect password (evidence 1.0) the hard drive will purge itself (evidence 1.1, 1.2). Therefore, as a forensic investigator, we only have one chance to get into the hard drive or else it will delete all of the information on the hard drive.
-
+    There is an anti-theft system that asks for a password before booting the operating system. If an incorrect password (evidence 1.0) is detected, the hard drive will purge itself (evidence 1.1) making it impossible to get into (evidence 1.2). As forensic investigators, we must find a backdoor to get around the anti-theft system.
 
 2. What operating system does the suspect use?
-#24-Ubuntu x86_64
+    The suspect is using "4.13.0-21-genertic #24-Ubuntu" (evidence 2.0).
 
 3. What is the username of the account typically used by the suspect?
-    Ubuntu->Advanced Options with Ubuntu -> (recovery mode) -> resume -> Ubuntu login page with user "Leslie Nielson"
-
+    The username of the account typically used by the suspect is "Leslie Nielson" (evidence 3.0). The suspect also uses the online alias "Artemis" (evidence 3.1) or "Artm3m15" (evidence 8.2).
 
 4. Any indication that the suspect shared the company secrets with other individuals?
 
@@ -32,25 +30,34 @@
 
 
 7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
-
-    Under leslie/Documents there is a zipped file called "secrets.zip" that is password protected. Using fzipcrack we were able to brute force a password "6f7y" (evidence 7.0)
-    Once decrypted, we found there to be 1.jpg, 2.jpg, contract.mp3, and secret_exe (evidence 7.1). Unzipping the folder it will show us that 2.jpg is nearly 3x greater in size than 1.jpg. We then renamed 2.jpg into 2.zip and opened it showing two more files. "good_advice.png" and "plan.png" (evidence 7.2). We explored contract.mp3 using a sonic visualizer and by applying a spectogram to the waveform, we discover a message "PP4m#36ajK1mu" (evidence 7.3). When we open secret_exe using a text editor, we discover plain text "the password is "ke9dtcesm6f"" (evidence 7.4)
-
-	- info.pdf —> get hash using john, then use john again to get password from hash
-- jpg1 had steg which said to drop bungle stock
+    There is a zipped file called "secrets.zip", which using password "6f7y
+     (evidence 7.0), contained
+        - 1.jpg, which contained an internal SDSC email (evidence 4.0)
+        - 2.jpg, which when renamed to 2.zip contained two more files "good_advice.png" and "plan.png" (evidence 7.2)
+        - contract.mp3, which when analyzed through a sonic visualizer revealed a message "PP4m#36ajK1mu" (evidence 4.4)
+        - secret_exe, which we discovered plain text "the password is "ke9dtcesm6f"" (evidence 4.2)
 
 8. Did the suspect try to delete any files before their arrest? Please attach the name(s) of the file(s) and any indications of their contents that you can find.
-	insurance.txt
-	planning.png
+    The suspect tried to delete the folder "finished" and files ".chat.log.swx", "insurance.txt", and "planning.png"
+        - We found the folder "finished" (evidence 8.0) which contained many images as well as multiple files
+        - "finished" contained a document that would eventually be "insurance.txt" (evidence 8.1) 
+        - We recovered ".chat.log.swx" (evidence 8.2) using Autopsy
+        - We found "planning.png" in 2.jpg from part 7 (evidence 7.2, 8.3).
+    The suspected deleted the contents from "bash_history" (evidence 5.5)
 
 9. List all other secrets, and other findings.
-    At least 212 Possible Zip Bombs (evidence 9.0)
 
-    Agent User to get into the concieled chat is 86753 (evidence 9.1)
+    217 Possible Zip Bombs: Using Autopsy, we were alerted to 217 possible zip bombs (evidence 9.0)
+    Leslie's Ubuntu Password: Used John the Ripper to find the password "copper" (evidence 9.1)
+    info.pdf password: Inside the recovered chat log (evidence 8.2), we got a link to a password protected pdf. We cracked the pdf, discovering password "beacon" (evidence 9.2)
+    Agent user: We used a python script (agent.py) to brute force https://weratepups.xyz in order to find the agent user, 86753, to real a concealed chat (evidence 9.3)
+    RSA Public key: found in id_rsa (evidence 9.4) in order to confirm our identity in the conconcealed chat
+    insurance.txt: Discovered the members of The Collective when recovered the folder "finished" (evidence 8.1)
+    Employee Badge: There is a SDSC Auditor - All Access employee badge (evidence 9.5)
 
-10. 
-a.This file indicates that the user running SDSC’s website was trying to log in to a machine that it did not have credentials for. They were using port 22 which is the ssh port, and so were tring to get remote access to root on sshd, CRON (a time-based job scheduler), tty1 (text only terminal) and PAM (pluggable authentication module). They successfully gained access to root and changed the password to “chauthtok” after finding user ‘nefarious’. 
+10.
+    a. What does this file indicate? (Be specific)
+        This file indicates that the user running SDSC’s website was trying to log in to a machine that it did not have credentials for. They were using port 22 which is the ssh port, and so were tring to get remote access to root on sshd, CRON (a time-based job scheduler), tty1 (text only terminal) and PAM (pluggable authentication module). They successfully gained access to root and changed the password to “chauthtok” after finding user ‘nefarious’
 
-b. This auth.log suggests that the user was trying to brute force a password. This suggests a program such as THC-HydrU or Hydra5-4, both of which can use a dictionary attack to crack SSH passwords. 
-
-    
+    b. Can you attribute this behavior to a specific program?
+        This auth.log suggests that the suspect was trying to brute force a password. This suggests a program such as THC-HydrU or Hydra5-4, both of which can use a dictionary attack to crack SSH passwords.

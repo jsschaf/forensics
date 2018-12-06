@@ -16,6 +16,13 @@
 
 5. Reconstruct the timeline of actions by the suspect that may be relevant
 
+- March 11, 2am: chat between Art3m15 and 5H3PH3RD discussing list of vulnerable hosts (evidence 5.2)
+- March 11 19:12:05 Deleted Tor Browser (evidence 5.1)
+- deleted bash history	2018-03-15 20:06:21 (EDT) (evidence 5.5)
+- deleted insurance and planning on 2018-03-15 20:00 (evidence 5.0)
+- March 15 did a backup with suspicious stuff, like testmalware  (evidence 5.3)
+- March 15 delete a bunch of stuff (evident in authlog evidence5.4.txt)
+
 
 
 6. Anything else on the computer that would imply the suspect had malicious intents in using this computer?
@@ -27,7 +34,7 @@
 7. Any suspicious-looking encrypted files on the machine? Attach decrypted contents (if possible) as evidence and briefly describe how you obtained the contents.
 
     Under leslie/Documents there is a zipped file called "secrets.zip" that is password protected. Using fzipcrack we were able to brute force a password "6f7y" (evidence 7.0)
-    Once decrypted, we found there to be 1.jpg, 2.jpg, contract.mp3, and secret_exe (evidence 7.1). Unzipping the folder it will show us that 2.jpg is nearly 3x greater in size than 1.jpg. We then renamed 2.jpg into 2.zip and opened it showing two more files. "good_advice.png" and "plan.png" (evidence 7.2). We explored contract.mp3 using a sonic visualizer and by applying a spectogram to the waveform, we discover a message "PP4m#36ajKlmu" (evidence 7.3). When we open secret_exe using a text editor, we discover plain text "the password is "ke9dtcesm6f"" (evidence 7.4)
+    Once decrypted, we found there to be 1.jpg, 2.jpg, contract.mp3, and secret_exe (evidence 7.1). Unzipping the folder it will show us that 2.jpg is nearly 3x greater in size than 1.jpg. We then renamed 2.jpg into 2.zip and opened it showing two more files. "good_advice.png" and "plan.png" (evidence 7.2). We explored contract.mp3 using a sonic visualizer and by applying a spectogram to the waveform, we discover a message "PP4m#36ajK1mu" (evidence 7.3). When we open secret_exe using a text editor, we discover plain text "the password is "ke9dtcesm6f"" (evidence 7.4)
 
 	- info.pdf —> get hash using john, then use john again to get password from hash
 - jpg1 had steg which said to drop bungle stock
@@ -40,4 +47,10 @@
     At least 212 Possible Zip Bombs (evidence 9.0)
 
     Agent User to get into the concieled chat is 86753 (evidence 9.1)
+
+10. 
+a.This file indicates that the user running SDSC’s website was trying to log in to a machine that it did not have credentials for. They were using port 22 which is the ssh port, and so were tring to get remote access to root on sshd, CRON (a time-based job scheduler), tty1 (text only terminal) and PAM (pluggable authentication module). They successfully gained access to root and changed the password to “chauthtok” after finding user ‘nefarious’. 
+
+b. This auth.log suggests that the user was trying to brute force a password. This suggests a program such as THC-HydrU or Hydra5-4, both of which can use a dictionary attack to crack SSH passwords. 
+
     
